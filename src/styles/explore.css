@@ -1,0 +1,190 @@
+:root {
+    --base-color: rgba(255, 255, 255, 1);
+    --hover-color: #432c73;
+}
+body {
+    overflow: hidden;
+    background: #E6E6FA;
+    background: linear-gradient(to right, #F2E527, white)
+  }
+  .menu-toggler {
+    position: absolute;
+    display: block;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+    width:40px;
+    height:40px;
+    z-index:2;
+    opacity:0;
+    cursor:pointer;
+  }
+  .menu-toggler:hover + label,
+  .menu-toggler:hover + label:before,
+  .menu-toggler:hover + label:after{
+    background: white;
+  }
+  .menu-toggler:checked + label {
+    background: transparent;
+  }
+  .menu-toggler:checked + label:before,
+  .menu-toggler:checked + label:after{
+    top:0;
+    width: 50px;
+    transform-origin: 50% 50%;
+  }
+  .menu-toggler:checked + label:before {
+    transform: rotate(45deg) translateY(-1px) translateX(-1px);
+  }
+  .menu-toggler:checked + label:after {
+    transform: rotate(-45deg);
+  }
+  .menu-toggler:checked ~ ul .menu-item { 
+    opacity: 1;
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(0deg) translate(-150px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(90deg) translateX(-150px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(180deg) translateX(-150px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(270deg) translateX(-150px);
+  }
+  .menu-toggler:checked ~ ul .menu-item strong {
+    pointer-events:auto;
+  }
+  .menu-toggler + label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(230, 239, 250, 0.9);
+    transition: transform 0.5s top 0.5s;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .menu-toggler + label:before,
+  .menu-toggler + label:after {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: transform 0.5s top 0.5s;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+}
+.menu-toggler + label:before {
+    top: 10px;
+}
+.menu-toggler + label:after {
+    top: -10px;
+}
+.menu-item:nth-child(1) strong {
+    transform: rotate(0deg);
+}
+.menu-item:nth-child(2) strong {
+    transform: rotate(-90deg);
+}
+.menu-item:nth-child(3) strong {
+    transform: rotate(-180deg);
+}
+.menu-item:nth-child(4) strong {
+    transform: rotate(-270deg);
+}
+.menu-item {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.menu-item strong {
+    display: block;
+    width: inherit;
+    height: inherit;
+    line-height: 150px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    pointer-events: none;
+    transition: 0.2s;
+    position: relative;
+    box-shadow:  inset 2px 2px 5px #bbaf0c, inset -2px -2px 3px rgba(255, 255, 255, 0.7);
+}
+.menu-item strong p {
+      color: rgba(0, 0, 0, 0.445);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+.menu-item strong:hover {
+    box-shadow:  inset 1px 1px 2px #bbaf0c, inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 44.44px
+}
+
+button {
+    position: relative;
+    top: -10px;
+    left: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    height: 50px;
+    margin: 20px;
+    border: 3px solid var(--base-color);
+    font-size: 2.5em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button p {
+    position: relative;
+    color: transparent;
+    background-image: linear-gradient(
+      90deg,
+      var(--hover-color) 0%,
+      var(--hover-color) 50%,
+      var(--base-color) 50%,
+      var(--base-color) 100%
+    );
+    background-repeat: repeat;
+    background-size: 200%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 300ms;
+}
+
+button p:hover{
+    background-position: 0 0;
+}

@@ -1,0 +1,109 @@
+.main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #191919;
+}
+.nav {
+    position: absolute;
+    background: #422C73;
+    color: #fff;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2em;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav div {
+    cursor: pointer;
+}
+
+.log {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: #F2E527;
+    right: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner {
+    width: 70%;
+    height: 70%;
+}
+.inner h1 {
+    position: relative;
+}
+
+.inner h1, .inner h3 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 3em;
+    color: #2f1e55;
+    transition: all 1s linear;
+}
+.inner h3 {
+    font-size: 4em;
+}
+
+.form {
+    width: 100%;
+    height: 355px;
+    margin-top: 60px;
+}
+
+.formC {
+    height: 200px;
+}
+.formC #form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+#form input {
+    width: 40%;
+    height: 40px;
+    border: none;
+    padding: 0 0 0 3px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.8em;
+    /* font-weight: bold; */
+    background-color: #f2e4275e;
+    box-shadow:  inset 2px 2px 5px #bbaf0c, inset -2px -2px 3px rgba(255, 255, 255, 0.7);
+}
+
+#form input:focus {
+    box-shadow:  inset 1px 1px 2px #bbaf0c, inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+}
+
+#form .submit {
+    width: 15%;
+    cursor: pointer;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    color: white;
+    background: #2f1e55;
+    box-shadow: 5px 5px 10px #8b8309;
+}
+#form .submit:hover {
+    box-shadow: 2px 2px 5px #8b8309;
+}
+#form .submit:active {
+  box-shadow: inset 1px 1px 2px #8b8309, inset -1px -1px 2px white;
+}
+#form input::placeholder {
+    letter-spacing: 1px;
+}

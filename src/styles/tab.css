@@ -1,0 +1,144 @@
+.outer {
+    width: 100%;
+    height: 100vh
+}
+
+.show {
+    width: 60%;
+    margin: auto;
+    height: 100%;
+}
+
+.sec {
+    backdrop-filter: blur(12px);
+    background-color: rgba(178, 60, 253, 0.2);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.mainDiv {
+    backdrop-filter: blur(9px);
+    border-radius: 5px;
+    /* backdrop-filter: blur( 3px );
+    background: #432c7396; */
+    margin: 5px 0;
+    width: 60%;
+    display: flex;
+    min-height: 400px;
+    flex-direction: column;
+    padding: 0 3px 0 10px;
+}
+.sec::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.sec::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.sec::-webkit-scrollbar-thumb
+{
+	background-color: #F90;	
+	background-image: -webkit-linear-gradient(90deg,
+  rgba(255, 255, 255, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+  rgba(255, 255, 255, .2) 50%,
+  rgba(255, 255, 255, .2) 75%,
+    transparent 75%,
+    transparent)
+}
+.mainDiv strong {
+    width: 100%;
+    height: 10%;
+    font-size: 3em;
+    padding-top: 2px;
+    vertical-align: middle;
+}
+.mainDiv img {
+    width: 100%;
+    height: 80%;
+}
+.mainDiv p {
+    width: 100%;
+    height: 10%;
+    padding: 3px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.formSec {
+    width: 80%;
+    margin: auto;
+    height: 20%;
+    background: #422C73;
+}
+
+#form1 {
+    padding: 10px;
+    font-size: 2em;
+}
+
+input[type=file]::file-selector-button {
+    border: 2px solid #6c5ce7;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #a29bfe;
+    transition: 0.2s;
+    cursor: pointer;
+    color: white;
+}
+input[type=file]:hover::file-selector-button {
+    background-color: #6153cad0;
+    border: 2px solid #a29bfe;
+}
+
+input[type=text] {
+    font-size: 1em;
+    padding-left: 3px;
+    width: 40%;
+    height: 40px;
+    border: none;
+    padding: 0 0 0 3px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.753);
+    box-shadow:  inset 2px 3px 10px #422C73, inset -2px -2px 5px white;
+    color: white;
+}
+input[type=text]:focus {
+    box-shadow:  inset 1px 1px 2px #422C73, inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.buts {
+    width: 50%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.buts input {
+    cursor: pointer;
+    width: 40%;
+    height: 30px;
+    border: 2px solid #6c5ce7;
+    border-radius: .2em;
+    background-color: #a29bfe;
+    transition: 0.2s;
+    color: white;
+    font-size: 1em;
+    padding: 0 1.6em;
+}
+
+.buts input:hover {
+    background-color: #6153cad0;
+    border: 2px solid #a29bfe;
+}
