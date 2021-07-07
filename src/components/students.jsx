@@ -12,26 +12,27 @@ function Students({ year, branch }) {
         e.preventDefault()
         const form = document.getElementById('form')
 
+        //using classic call back hell
         db.collection(`${year}`).doc(`${branch}`).collection('students').add({
             Name: name,
             Gender: gender
-        })
+        })//adding a new student in a particular year and branch
         .then(docRef => {
             db.collection(`${year}`).doc(`${branch}`).collection('students').doc(`${docRef.id}`).update({
-                Roll: docRef.id
-            }).then(doc => {
+                Roll: docRef.id//updaing the roll number of student
+            }).then(doc => {//after updating the roll in firestore pushing the details of this student to realtime database
                 rl.ref(`${year}`).push({
                     Name: name,
                     Branch: branch,
-                    Email: `${docRef.id}@iiitvadodara.ac.in`,
+                    Email: `${docRef.id}@gmail.com`,
                     Password: docRef.id,
                 }).then(user => {
-                    auth.createUserWithEmailAndPassword(`${docRef.id}@iiitvadodara.ac.in`, docRef.id)
+                    auth.createUserWithEmailAndPassword(`${docRef.id}@gmail.com`, docRef.id)//create an account in authentication
                     .then(user => {
                         db.collection(`${year}`).doc(`${branch}`).collection('students').onSnapshot(values => {
                             var a = []
                             values.forEach(val => a.push(val.data()))
-                            setArr(a)
+                            setArr(a)//real time updates after a student is added
                             setSure(false)
                         })
                     })

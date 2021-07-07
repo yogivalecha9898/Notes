@@ -27,7 +27,7 @@ function Tab({ props }) {
 
     useEffect(() => {
         if(branch && year) {
-            db.collection(`${year}`).doc(`${branch}`).collection('notes').onSnapshot(values => {
+            db.collection(`${year}`).doc(`${branch}`).collection('notes').onSnapshot(values => {//live changes in the postings
                 var a = []
                 values.forEach(val => a.push(val.data()))
                 setArr(a)
