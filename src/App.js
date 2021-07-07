@@ -82,15 +82,13 @@ function App() {
                    initial="ini"
                    animate={show ? "fin":""}
                   >
-                  Greetings, This is is a Notes sharing apps. The way it works is, there are two sections
-                  in this web app, one with me and that is supposed to be the secured one, Admin and the other  
-                  for the Users. Now admin has made the account of all the users from their respective years 
+                  This is is a Notes sharing app. The way it works is, there are two sections
+                  in this web app, one with an admin and that is supposed to be the secured one, Admin and the other  
+                  for the Users. Now admin made the accounts of all the users from their respective years 
                   and Branches. User has been given a password and an email to access the contents of this app
-                  by his teacher. He/She may go towards the login section, login to his/her respective year failing to  
-                  do so will result in invalid user, once logged in, he/she can view notes shared from any other Branches
-                  but he can't post in other branches. He/she can only in his/her respective branch.<br /><br />
-                  This app has some codes taken from sources, for styling purposes, as main focus was ReactJS and Firebase's
-                  implementation.
+                  by his instructor. User may go towards the login section, login to his/her respective year, failing to  
+                  do so will result in an invalid user, once logged in, he/she can view notes shared from any other Branches
+                  but can't post in other branches. User can, only in its respective branch.
                   </motion.p>
                 </motion.section> 
               </div>

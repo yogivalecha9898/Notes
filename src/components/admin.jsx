@@ -4,14 +4,14 @@ import Branch from './branch'
 
 function Admin() {
 
+    const[year, setYear] = useState(0)
+    const[clgYear, setCYear] = useState(-1)
+
     useEffect(() => {
         let date = new Date()
         setYear(date.getFullYear())
     }, [])
     
-    const[year, setYear] = useState(0)
-    const[clgYear, setCYear] = useState(-1)
-
     return (
         <>
             {clgYear === -1 ?

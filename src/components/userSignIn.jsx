@@ -20,7 +20,7 @@ function UserSignIn({ props, year }) {
                     localStorage.setItem("ownerName", value.val().Name)
                 }
             })
-            if(sure) {
+            if(sure) {//making sure if the user is of the respective year
                 localStorage.setItem("year", year)
                 localStorage.setItem("pass", pass)
                 auth.signInWithEmailAndPassword(email, pass).then(obj => {
