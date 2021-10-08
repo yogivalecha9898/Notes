@@ -4,14 +4,14 @@ import 'firebase/database'
 import 'firebase/auth'
 import 'firebase/storage'
 
-var firebaseConfig = {
-  apiKey: "AIzaSyCCOi_fACARyYoV4bS7vuuqtU6qqRRCrq8",
-  authDomain: "noteshare-4e19e.firebaseapp.com",
-  projectId: "noteshare-4e19e",
-  storageBucket: "noteshare-4e19e.appspot.com",
-  messagingSenderId: "855345446267",
-  appId: "1:855345446267:web:2df30e14172a118d1b91de"
-}
+const firebaseConfig = {
+  apiKey: "AIzaSyCFQbbaf4M_BUJagnQenUwCZCFwwmkCJHc",
+  authDomain: "noteshare-45181.firebaseapp.com",
+  projectId: "noteshare-45181",
+  storageBucket: "noteshare-45181.appspot.com",
+  messagingSenderId: "753132916516",
+  appId: "1:753132916516:web:404d46cc259ce9d6242db1"
+};
 
 firebase.initializeApp(firebaseConfig);
 
